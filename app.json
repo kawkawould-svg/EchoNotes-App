@@ -1,3 +1,15 @@
 {
-  "expo":{"name":"EchoNotes","slug":"echonotes","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"automatic","scheme":"echonotes","plugins":["expo-router"]}
+  "expo": {
+    "name": "EchoNotes",
+    "slug": "echonotes",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "echonotes",
+    "plugins": [
+      "expo-router",
+      "expo-document-picker",
+      "expo-sqlite"
+    ]
+  }
 }
