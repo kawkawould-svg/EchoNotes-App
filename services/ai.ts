@@ -1,0 +1,2 @@
+export type GeneratedMaterial={notes:string;summary:string;exercises:string};
+export async function generateStudyMaterial(_transcript:string):Promise<GeneratedMaterial>{throw new Error("AI service not configured yet. Use a secure backend; never ship an API key in the mobile bundle.");}
