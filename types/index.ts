@@ -1,0 +1,2 @@
+export type AudioFormat="m4a"|"mp3"|"wav";
+export type StudyMaterial={id:string;title:string;createdAt:string;audioUri?:string;audioFormat?:AudioFormat;transcript?:string;notes?:string;summary?:string;exercises?:unknown[];tags?:string[];folderId?:string;};
