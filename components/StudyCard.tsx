@@ -1,0 +1,3 @@
+import {View,Text,StyleSheet} from "react-native"; import {radius,spacing} from "@/constants/theme";
+export function StudyCard({title,children,backgroundColor,textColor}:{title:string;children:React.ReactNode;backgroundColor:string;textColor:string}){return <View style={[s.card,{backgroundColor}]}><Text style={[s.title,{color:textColor}]}>{title}</Text><Text style={{color:textColor,lineHeight:23}}>{children}</Text></View>}
+const s=StyleSheet.create({card:{borderRadius:radius.md,padding:spacing.md,marginBottom:spacing.md},title:{fontSize:18,fontWeight:"700",marginBottom:8}});
