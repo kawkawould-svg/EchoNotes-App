@@ -1,0 +1,5 @@
+export const lightColors={background:"#F8F7FC",surface:"#FFFFFF",text:"#25243A",mutedText:"#77758B",border:"#E8E5F0",lavender:"#CFC4F7",mint:"#BFE8D5",peach:"#FFD7C2",babyBlue:"#C7DFF7",blushPink:"#F6C9D5",primary:"#8D7BC7",onPrimary:"#FFFFFF"};
+export const darkColors={background:"#171827",surface:"#222438",text:"#F5F3FA",mutedText:"#AAA8BC",border:"#35374D",lavender:"#8D80B9",mint:"#79B69B",peach:"#C89A83",babyBlue:"#819FBD",blushPink:"#B58A98",primary:"#A596D8",onPrimary:"#171827"};
+export const spacing={xs:4,sm:8,md:16,lg:24,xl:32,xxl:40} as const;
+export const radius={sm:10,md:16,lg:22,pill:999} as const;
+export const typography={title:{fontSize:28,fontWeight:"700" as const},heading:{fontSize:21,fontWeight:"700" as const},body:{fontSize:16,fontWeight:"400" as const},small:{fontSize:13,fontWeight:"400" as const}};
