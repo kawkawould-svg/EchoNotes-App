@@ -1,0 +1,1 @@
+export function toPlainText(note:{title:string;transcript?:string;notes?:string;summary?:string;exercises?:string}){return [note.title,"","SUMMARY",note.summary||"","NOTES",note.notes||"","EXERCISES",note.exercises||"","TRANSCRIPT",note.transcript||""].join("\n");}
