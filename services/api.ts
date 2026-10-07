@@ -6,8 +6,11 @@ function apiBase(){const base=process.env.EXPO_PUBLIC_API_URL?.replace(/\/$/,"")
 async function readError(res:Response,fallback:string){try{const data=await res.json();if(data?.error)return new Error(data.error);}catch{}return new Error(fallback);}
 
 export async function transcribe(uri:string):Promise<TranscriptResponse>{
+ const fileResponse=await fetch(uri);
+ if(!fileResponse.ok)throw new Error("Could not read the recorded audio.");
+ const blob=await fileResponse.blob();
  const form=new FormData();
- form.append("file",{uri,name:"audio.m4a",type:"audio/m4a"} as any);
+ form.append("file",blob,"audio.m4a");
  const res=await fetch(apiBase()+"/transcribe",{method:"POST",body:form});
  if(!res.ok)throw await readError(res,"Transcription failed.");
  return res.json();
