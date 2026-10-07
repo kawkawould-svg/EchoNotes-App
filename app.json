@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "scheme": "echonotes",
+    "android": {
+      "package": "com.echonotes.app"
+    },
     "plugins": [
       "expo-router",
       "expo-document-picker",
