@@ -1,19 +1,28 @@
 # EchoNotes
 
-EchoNotes is a React Native (Expo) + TypeScript mobile app that turns audio recordings into organized study material.
+EchoNotes is a React Native + Expo study assistant that turns lecture audio into organized study material.
 
-## Planned features
-- Record or import m4a, mp3, wav
-- Transcription
-- Notes, summaries, quizzes and flashcards
-- SQLite library with search, tags and folders
-- Copy, text and PDF export
-- Light, dark and system themes
+## What it does
+- Record a lecture or import audio
+- Transcribe audio through a secure backend
+- Generate notes, summaries, exercises and flashcards
+- Save study materials locally in SQLite
+- Search the personal library
+- Share saved study material as text
+- Choose System, Light or Dark appearance
+
+## Architecture
+The mobile app never contains the OpenAI API key. It sends audio/transcript requests to the backend configured through `EXPO_PUBLIC_API_URL`.
+
+The backend uses the OpenAI API for transcription and study-material generation.
 
 ## Setup
 1. Install Node.js.
 2. Run `npm install`.
-3. Run `npx expo start`.
-4. Open with Expo Go or an emulator.
+3. Configure the backend environment variables in `backend/.env`.
+4. Start the backend with `npm start` from the `backend` directory.
+5. Set `EXPO_PUBLIC_API_URL` in the mobile app environment.
+6. Run `npx expo start`.
 
-API and SQLite implementation will be added in later stages.
+Never put `OPENAI_API_KEY` in the mobile app.
+
