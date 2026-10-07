@@ -10,13 +10,7 @@
       "expo-router",
       "expo-document-picker",
       "expo-sqlite",
-      [
-        "expo-audio",
-        {
-          "microphonePermission": "Allow EchoNotes to access your microphone.",
-          "recordAudioAndroid": true
-        }
-      ]
+      "expo-audio"
     ]
   }
 }
